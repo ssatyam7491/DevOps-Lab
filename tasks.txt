@@ -3,3 +3,4 @@ Task Tracker
 1. Learn Git basics
 2. Understand version control
 3. Practise branching and merging
+4. Learn merge conflict resolution
