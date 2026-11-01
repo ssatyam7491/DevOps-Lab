@@ -1,0 +1,6 @@
+New Feature: Task Priority
+
+Tasks can be organised according to priority:
+- High
+- Medium
+- Low
