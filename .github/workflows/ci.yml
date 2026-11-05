@@ -1,4 +1,3 @@
-
 name: Node.js CI Pipeline
 
 on:
@@ -8,6 +7,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: Lab6-CI
 
     strategy:
       matrix:
@@ -22,6 +25,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
+          cache-dependency-path: Lab6-CI/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -39,4 +43,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-package-${{ matrix.node-version }}
-          path: '*.tgz'
+          path: Lab6-CI/*.tgz
